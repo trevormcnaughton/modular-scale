@@ -1,0 +1,84 @@
+html {
+  font: 18px/1.618 "Avenir Next", "Helvetica Neue", "Helvetica", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+//
+// Establish a base margin for most block level elements, 1.5rem = 27 / 18
+//
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,pre,table,fieldset,hr {
+  margin-bottom: 29px;
+  margin-bottom: 1.618rem; 
+}
+
+h1, .alpha {
+  font-size: 76px;
+  font-size: 4.236rem;
+  line-height: 1;
+  color: lighten($brand-color, 10%);
+}
+ 
+h2, .beta {
+  font-size: 47px;
+  font-size: 2.618rem;
+  line-height: 1.149;
+}
+ 
+h3, .gamma {
+  font-size: 42px;
+  font-size: 2.335rem;
+  line-height: 1.286;
+}
+ 
+h4, .delta {
+  font-size: 29px;
+  font-size: 1.618rem;
+  line-height: 0.931;
+}
+ 
+h5, .epsilon {
+  font-size: 26px;
+  font-size: 1.443rem;
+  line-height: 1.039;
+}
+
+
+
+
+
+//------------------------------------------------------------
+//
+// $Helpers
+//
+//------------------------------------------------------------
+
+.bt-light {
+  font-weight: lighter;
+  font-weight: 200;
+}
+
+.bt-bold {
+  font-weight: bold;
+  font-weight: 600;
+}
+
+.bt-heavy {
+  font-weight: bolder;
+  font-weight: 700;
+}
+
+.bt-black {
+  font-weight: bolder;
+  font-weight: 900;
+}
+
+.bt-italic {
+  font-style: italic;
+}
+
+.bt-uppercase {
+  text-transform: uppercase;
+}

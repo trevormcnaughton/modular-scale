@@ -1,0 +1,58 @@
+body {
+   font-size: 18px;
+   line-height: 1.5em;
+   font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+   font-size: 4.236em;
+   line-height: 1.06;
+   margin-bottom: .62em;
+   margin-top: 0.48em;
+   letter-spacing: -1px;
+   font-weight: 700;
+}
+
+h2 {
+   font-size: 2.618em;
+   line-height: 1.149em;
+   margin-bottom: 1.149em;
+}
+
+h3 {
+   font-size: 2.335em;
+   line-height: 1.568em;
+   margin-bottom: 0.362em;
+}
+
+h4 {
+   font-size: 1.618em;
+   line-height: .931034483em;
+   margin-bottom: .931034483em;
+}
+
+h5 {
+   font-size: 1.443em;
+   line-height: 1.038461538;
+   margin-bottom: 0.780em;
+}
+
+article {
+   margin: auto;
+}
+
+ul {
+   margin-top: 0em;
+   margin-bottom: 1.5em;
+}
+
+small, .small {
+   font-size: 0.892em;
+   letter-spacing: 0px;
+}
+
+aside {
+   font-size: 0.61111em;
+}

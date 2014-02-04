@@ -1,0 +1,57 @@
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-em($value, $base-value: $_default-font-size)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1em;
+  @if ($value == 0em) { $value: 0; } /* Turn 0em into 0 */
+  @return $value;
+}
+
+@function em($values, $base-value: $_default-font-size) {
+  $max: length($values);
+
+  @if $max == 1 { @return convert-to-em(nth($values, 1), $base-value); }
+
+  $emValues: ();
+  @for $i from 1 through $max {
+    $emValues: append($emValues, convert-to-em(nth($values, $i), $base-value));
+  }
+  @return $emValues;
+}
+
+@function lh( $target, $context ) {
+  $target: convert-to-em($target);
+  $context: convert-to-em($context);
+  @return $target / $context;
+}
+
+// This tells compass where we to find the PNG files
+// NEVER TRY AND COMPILE A JPG OR A PSD SAVED WITH A JPG EXENSION
+// Everything will explode
+$sprites: sprite-map("1x/*.png");
+$sprites2x: sprite-map("2x/*.png");
+ 
+// Spriting
+// This spriting technique allows us to create awesome sprites with @2x assets with relative ease.
+@mixin sprite-background($name) {
+  background-repeat: no-repeat;
+  display: block;
+  text-indent: -999em;
+  background-image: sprite-url($sprites);
+  background-position: sprite-position( $sprites, $name );
+  height: image-height(sprite-file( $sprites, $name ));
+  width: image-width(sprite-file( $sprites, $name ));
+  
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+         only screen and (min--moz-device-pixel-ratio: 1.5),
+         only screen and (min-resolution: 240dpi){
+         
+    background-image: sprite-url($sprites2x);
+    background-position: 0 round( nth( sprite-position( $sprites2x, $name ), 2 ) / 2 );
+    height: round( image-height( sprite-file( $sprites2x, $name )) / 2);
+    width: round( image-width( sprite-file( $sprites2x, $name )) / 2);
+    
+    @include background-size( ceil( image-width( sprite-path( $sprites2x )) / 2) auto );
+  }
+}

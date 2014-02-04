@@ -1,0 +1,28 @@
+
+$_default-baseline: 1.618;
+$_default-font-size: 18px;
+
+$_font-color: #4a4b4c;
+$brand-color: #317FC5;
+
+$brand-black: darken($brand-color, 31%);
+
+// H1 Defaults
+$_h1-font-size: convert-to-em( ms( 6, 18px 55px, golden() ) );
+$_h1-baseline: lh( $_default-baseline*3, $_h1-font-size )*1em;
+
+// H2 Defaults
+$_h2-font-size: convert-to-em( ms( 4, 18px 55px, golden() ) );
+$_h2-baseline: lh( $_default-baseline*2, $_h2-font-size )*1em;
+
+// H3 Defaults
+$_h3-font-size: convert-to-em( ms( 3, 18px 55px, golden() ) );
+$_h3-baseline: lh( $_default-baseline*2, $_h3-font-size )*1em;
+
+// H4 Defaults
+$_h4-font-size: convert-to-em( ms( 2, 18px 55px, golden() ) );
+$_h4-baseline: lh( $_default-baseline*2, $_h4-font-size )*1em;
+
+// H5 Defaults
+$_h5-font-size: convert-to-em( ms( 1, 18px 55px, golden() ) );
+$_h5-baseline: lh( $_default-baseline*2, $_h5-font-size )*1em;

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Braintree Baseline Grid</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header>
+            <div class="row">
+                <h1 class="logo small uppercase bt-bold"></h1>
+            </div>
+        </header>
+        <div class="main">
+            <div class="bt-marquee">
+            </div>
+            <div class="grid-ui">
+                <a href="#" class="grid-toggle bt-button">Toggle Grid</a>
+            </div>
+            <div class="container">
+                <h1 class="bt-alpha bt-heavy">Baseline Grid &amp; Modular Scale</h1>
+                <p>Our team has taken an almost exponential leap in growth over the past few months at Braintree, and it has become apparent that we needed a more mature set of design tools. This is not to say that we need another app for pushing pixels, but rather we needed something that would help our team maintain consistency across all of our projects.</p>
+                <p>The first major step in doing this was to create something that would help us maintain strong, meaningful, and proportional visual harmony.</p>
+
+                <h3 class="bt-gamma bt-italic">All Your Baseline</h3>
+                <p>Baseline is traditionally defined as the invisible line where all lower case letters rest. The space between these lines and the caps of the characters underneath is referred to as leading which is literally based on strips of lead that would go between lines of text to space them out, this measurement is critical in establishing consistent vertical movement.</p>
+                <p>However, the idea of a baseline isn't 100% accurate when we switch contexts from the printed page to the browser. Instead of defining leading in css we use the property line-height. Visually, these two ideas are the same, but technically line-height is doing things a bit differently than leading. Instead of adding space to the bottom of each line, it adds a 'half-leading' to the top and bottom of each line vertically centering it between baselines.</p>
+                <h3>Mathematical</h3>
+                <script src="https://gist.github.com/trevormcnaughton/caf258f25d9fbb01c62e.js"></script>
+                <h3>Final Baseline</h3>
+                <script src="https://gist.github.com/trevormcnaughton/78199e3853119cadf035.js"></script>
+                <div class="bt-grid one-up">
+                    <a href="#" class="bt-button">Download .CSS</a>
+                </div>
+                <h5 class="bt-epsilon">Grab Some Templates</h5>
+                <div class="bt-grid two-up">
+                    <a href="#" class="bt-button">Download .PSD</a>
+                    <a href="#" class="bt-button">Download .Sketch</a>
+                </div>
+            </div>
+        </div>
+        <div class="baseline"></div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

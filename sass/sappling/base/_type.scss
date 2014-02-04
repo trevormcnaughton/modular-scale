@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+
+/**
+ * Heading class selectors implement six levels of document headings, alpha is
+ * the most important and zeta is the least.
+ */
+
+html {
+  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, .bt-alpha {
+  font-size: 76px;
+  font-size: 4.236rem;
+  line-height: 1.066;
+}
+
+h2, .bt-beta {
+  font-size: 47px;
+  font-size: 2.618rem;
+  line-height: 1.149;
+}
+
+h3, .bt-gamma {
+  font-size: 42px;
+  font-size: 2.335rem;
+  line-height: 1.286;
+}
+
+h4, .bt-delta {
+  font-size: 29px;
+  font-size: 1.618rem;
+  line-height: 0.931;
+}
+
+h5, .bt-epsilon {
+  font-size: 26px;
+  font-size: 1.443rem;
+  line-height: 1.039;
+}
+
+h6, .bt-zeta {
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/**
+ * Non-standard class selectors for heroes, masthead, promos, etc.
+ */
+
+.bt-giga {
+  font-size: 123px;
+  font-size: 6.854rem;
+  line-height: 0.878;
+}
+
+.bt-mega {
+  font-size: 110px;
+  font-size: 6.112rem;
+  line-height: 0.982;
+}
+
+/**
+ * Non-standard class selectors for small print.
+ */
+
+.bt-small {
+  font-size: 16px;
+  font-size: 0.892rem;
+  line-height: 1.688;
+}
+
+.bt-micro {
+  font-size: 11px;
+  font-size: 0.618rem;
+  line-height: 2.455;
+}
+
+.bt-heavy {
+  font-weight: 700;
+}

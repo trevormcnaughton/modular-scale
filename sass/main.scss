@@ -1,0 +1,216 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "ceaser-easing";
+@import "modular-scale";
+@import "functions";
+@import "settings";
+@import "type";
+
+* {
+  box-sizing: border-box;
+}
+
+html, 
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: #4a4b4c;
+}
+
+.row {
+  max-width: em(1140px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+  background: transparent;
+}
+
+.baseline {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+
+  &.active {
+    @include background-image(linear-gradient( transparent 26px , rgba($brand-color, 0.25) 27px ));
+    background-size: 100% 1.5em;
+    display: block;
+  }
+}
+
+
+
+header {
+  color: #fff;
+  background: rgba(#fff, 0.15);
+  height: 4.236rem;
+  position: absolute; width: 100%;
+  top: 0;
+  z-index: 999;
+  @include transition( background 222ms );
+
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+  &:hover {
+    background: rgba(#fff, .45);
+
+    .logo {
+      @include transform( rotate(25deg));
+    }
+  }
+}
+
+.logo{ 
+  margin: .5rem auto 0;
+  @include transition(transform 333ms); 
+  @include transition-timing-function(cubic-bezier(.17,.67,.77,1.35));
+  @include sprite-background(za);
+}
+
+.bt-marquee {
+  width: 100%;
+  height: 29.03rem;
+  margin-bottom: 1.5rem;
+  background: url('/img/mod-scale@2x.png') no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.grid-ui {
+  position: relative;
+  float: right;
+  top: 10px;
+  right: 30px;
+  z-index: 999;
+}
+
+.bt-button {
+  text-decoration: none;
+  border: 1px solid $brand-color;
+  background: #fff;
+  color: $brand-color;
+  font-weight: 600;
+  font-size: 0.8em;
+  border-radius: 5px;
+  padding: 1.22em 1.8em;
+  line-height: 1;
+  text-align: center;
+  display: inline-block;
+
+  &:hover{
+    background: lighten($brand-color, 8%);
+    color: #fff;
+  }
+}
+
+.bt-grid {
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  &.one-up {
+    font-size: 1rem;
+  
+    &> * {
+      width: 100%;
+    }
+  }
+
+  &.two-up {
+    &> * {
+      margin-right: 2%;
+      font-size: 16px;
+      width: 49%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+
+.container {
+  width: ms( 15, 18px 55px, golden() );
+  margin: 0 auto;
+  padding-bottom: ms(2);
+}
+
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Better styles for embedding GitHub Gists */
+.gist{
+  font-size:0.892em;
+  margin-bottom:32px;
+  width:100%;
+
+  .gist-file {
+    border: none !important;
+    .gist-data {
+      border-bottom: none !important;
+    }
+    .gist-syntax {
+      background: #30353d !important;
+      .line-numbers {
+        background: darken(#30353d, 5%) !important;
+        padding: 1rem !important;
+        border: none !important;
+      }
+      .nt {
+        color: #84d6ed;
+      }
+      .na {
+        color: #fff4d3;
+      }
+      .mf, .mi {
+        color: #00ffbe;
+      }
+      .kt {
+        color: #099;
+      }
+      .p {
+        color: #fff;
+      }
+      .nc {
+        color: $brand-color;
+      }
+    }
+  }
+}
+.gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}
+.gist-meta{ display: none; }
+
+code {
+  font-size: 0.892em;
+  font-family: "Menlo", monospace;
+  background: #efefef;
+  padding: 2px 2px 1px;
+  @include border-radius(2px);
+  @include box-shadow( inset 0 0 0 1px darken(#efefef, 10%));
+}
+
+
+
+
+
+.small {
+  font-size: 16px;
+}
